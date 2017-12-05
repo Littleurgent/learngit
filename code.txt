@@ -1,18 +1,6 @@
 ﻿module DailyOffice
 {
-   interface MeetingManagement
-   {
-	   String meetingId;
-	   String meetingDate;
-	   String meetingContent;
-	   String meetingensennel;
-	   String peopleNumberOfmeeting;
-	   String meetingState;
-	   
-	   String bookMeetingromm(String meetingId,String meetingDate,String peopleNumberOfmeeting);//会议室预定
-	   String bookStateQuerying(String meetingId);//预订情况查询
-	   String manageMeetingRecord(String meetingId);//会议记录管理
-   }
+   
    
    interface AssetManagement
    {
