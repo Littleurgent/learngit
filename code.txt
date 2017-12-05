@@ -1,0 +1,53 @@
+﻿module DailyOffice
+{
+   interface MeetingManagement
+   {
+	   String meetingId;
+	   String meetingDate;
+	   String meetingContent;
+	   String meetingensennel;
+	   String peopleNumberOfmeeting;
+	   String meetingState;
+	   
+	   String bookMeetingromm(String meetingId,String meetingDate,String peopleNumberOfmeeting);//会议室预定
+	   String bookStateQuerying(String meetingId);//预订情况查询
+	   String manageMeetingRecord(String meetingId);//会议记录管理
+   }
+   
+   interface AssetManagement
+   {
+	   String computerId;
+	   String printerId;
+	   String smallElectricalEquipmentId;
+	   
+	   String computerManage(String computerId);//电脑管理
+	   String printerManage(String printerId);//打印机管理
+	   String smallElectricalEquipmentManage(String smallElectricalEquipmentId);//小型机电设备管理
+   }
+   
+   interface OfficesuppliesManagement
+   {
+	   String supplyName;
+	   String supplyAmount;
+	   
+	   Boolean applyOfficeSupplies(String supplyName,String supplyAmount);//办公用品申请
+	   Boolean approvedOfficeSupplies(String supplyName,String supplyAmount);//办公用品审批
+	   String offerOfficesupplies(String supplyName,String supplyAmount); //办公用品发放
+	   String countOfficesupplies(String supplyName);//办公用品统计
+	   String queryOfficesupplies(String supplyName);//办公用品查询
+   }
+   
+   interface VehicleManagement
+   {
+	   String vehicleBrand;
+	   String vehicleId;
+	   String vehicleState;
+	   String vehicleAmount;
+	   
+	   Boolean applyVehicle(String vehicleId);//车辆申请
+	   Boolean approvedVehicle(String vehicleId,String vehicleState);//车辆审批
+	   String recordVehicleState(String vehicleId,String vehicleState);//车辆情况记录
+	   String countVehicle(String vehicleBrand);//车辆统计
+	   String queryVehicle(String vehicleId);//车辆查询
+   }
+}
